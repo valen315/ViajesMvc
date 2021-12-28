@@ -1,0 +1,26 @@
+﻿@model List<ProyectoFinal.Models.ParticularViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="row">
+    <h3>@Html.ActionLink("Crear", "New")</h3>
+</div>
+
+<div>
+    @foreach (var data in Model)
+    {
+        <ul>
+            <li>@data.Nombre</li>
+            <li>@data.Provincia</li>
+            <li>@data.Telefono</li>
+        
+        
+        </ul>
+
+}
+
+</div>
+
+

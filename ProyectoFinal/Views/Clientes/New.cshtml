@@ -1,0 +1,51 @@
+﻿@model ProyectoFinal.Models.ParticularForm
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+
+@using (Html.BeginForm("New", "Clientes", FormMethod.Post))
+{
+<div class="form">
+    <div class="form-group">
+        @Html.LabelFor(d => d.Nacionalidad)
+        @Html.TextBoxFor(d => d.Nacionalidad, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Nacionalidad, null)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(d => d.Provincia)
+        @Html.TextBoxFor(d => d.Provincia, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Provincia, null)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(d => d.Direccion)
+        @Html.TextBoxFor(d => d.Direccion, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Direccion, null)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(d => d.Telefono)
+        @Html.TextBoxFor(d => d.Telefono, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Telefono, null, new { @class = "mal" })
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(d => d.DNI)
+        @Html.TextBoxFor(d => d.DNI, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.DNI, null)
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(d => d.Apellido)
+        @Html.TextBoxFor(d => d.Apellido, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Apellido, null)
+    </div>
+    <div class="form-group ">
+        @Html.LabelFor(d => d.Nombre)
+        @Html.TextBoxFor(d => d.Nombre, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Nombre, null)
+    </div>
+    <div>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+    
+</div>
+}
