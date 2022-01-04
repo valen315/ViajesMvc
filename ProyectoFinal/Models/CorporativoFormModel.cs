@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProyectoFinal.Models
 {
-    public class ParticularForm
+    public class CorporativoFormModel
     {
         [Key]
         public int Id { get; set; }
@@ -30,17 +30,30 @@ namespace ProyectoFinal.Models
         [StringLength(30)]
         [Display(Name = "Telefono")]
         public string Telefono { get; set; }
+
         [Required(ErrorMessage = "DNI es requerido")]
-        [StringLength(30)]
+        [StringLength(10)]
         [Display(Name = "DNI")]
         public string DNI { get; set; }
+
         [Required(ErrorMessage = "Apellido es requerido")]
         [StringLength(30)]
         [Display(Name = "Apellido")]
         public string Apellido { get; set; }
+
         [Required(ErrorMessage = "Nombre es requerido")]
         [StringLength(30)]
         [Display(Name = "Nombre")]
         public string Nombre { get; set; }
+
+        [Required(ErrorMessage = "CUIT es requerido")]
+        [StringLength(15)]
+        [Display(Name = "CUIT")]
+        public string CUIT { get; set; }
+
+        [Required(ErrorMessage = "Razon Social es requerido")]
+        [StringLength(50)]
+        [Display(Name = "Razon social")]
+        public string RSocial { get; set; }
     }
 }

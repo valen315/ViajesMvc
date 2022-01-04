@@ -1,0 +1,30 @@
+﻿@model List<ProyectoFinal.Models.CorporativoViewModel>
+@{
+    ViewBag.Title = "Cliente Corporativo";
+}
+
+
+<div class="container">
+
+    <h2>Listado de clientes corporativos</h2>
+    <div class="row">
+        <h3>@Html.ActionLink("Crear", "NewCorp","Clientes")</h3>
+    </div>
+
+    <div>
+        @foreach (var data in Model)
+        {
+            <ul>
+                <li>@data.Nombre</li>
+                <li>@data.Provincia</li>
+                <li>@data.Telefono</li>
+                <li>@data.CUIT</li>
+                <li>@data.RSocial</li>
+            </ul>
+
+        }
+
+    </div>
+
+
+</div>
